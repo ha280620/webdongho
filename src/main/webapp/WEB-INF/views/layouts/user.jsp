@@ -48,8 +48,8 @@
 						href="register.html"><span class="icon-edit"></span> Free
 						Register </a> <a href="contact.html"><span class="icon-envelope"></span>
 						Contact us</a> <a href="cart.html"><span
-						class="icon-shopping-cart"></span> ${ TotalQuantityCart } Sản Phẩm - <span
-						class="badge badge-warning"> ${ TotalPriceCart } VNĐ</span></a>
+						class="icon-shopping-cart"></span> 2 Item(s) - <span
+						class="badge badge-warning"> $448.42</span></a>
 				</div>
 			</div>
 		</div>
@@ -85,7 +85,7 @@ Body Section
 				<a href="#"><img
 					src="<c:url value="/assets/user/img/disc.png"/>" alt="payment"></a>
 			</p>
-			<span>Copyright &copy; 2021<br> bootstrap ecommerce
+			<span>Copyright &copy; 2013<br> bootstrap ecommerce
 				shopping template
 			</span>
 		</div>
@@ -99,8 +99,5 @@ Body Section
 	<script
 		src="<c:url value="/assets/user/js/jquery.scrollTo-1.4.3.1-min.js" />"></script>
 	<script src="<c:url value="/assets/user/js/shop.js" /> "></script>
-	
-	<decorator:getProperty property="page.script"></decorator:getProperty>
-
 </body>
 </html>

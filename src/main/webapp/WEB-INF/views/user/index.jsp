@@ -14,7 +14,7 @@
 			
 					<li><a class="totalInCart" href="cart.html"><strong> Đã mua
 					<span class="badge badge-warning pull-right"
-								style="line-height: 18px;">${ TotalPriceCart } VNĐ</span>
+								style="line-height: 18px;">$448.42</span>
 						</strong></a></li>
 				</ul>
 			</div>
@@ -181,7 +181,7 @@ New Products
 									<h4>
 										<a class="defaultBtn" href="product_details.html"
 											title="Click to view"><span class="icon-zoom-in"></span></a> <a
-											class="shopBtn" href="<c:url value="/AddCart/${item.id_product }"/> " title="add to cart"><span
+											class="shopBtn" href="#" title="add to cart"><span
 											class="icon-plus"></span></a> <span class="pull-right"><fmt:formatNumber type="number" groupingUsed="true" value="${ item.price }" />   ₫</span>
 									</h4>
 								</div>
