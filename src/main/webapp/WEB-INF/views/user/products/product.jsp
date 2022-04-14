@@ -61,8 +61,7 @@
 				<li>
 					<div class="thumbnail">
 						<a class="zoomTool" href="product_details.html"
-							title="add to cart"><span class="icon-search"></span> QUICK
-							VIEW</a> <img src="assets/img/bootstrap-ecommerce-templates.png"
+							title="Thêm Vào Giỏ Hàng"><span class="icon-search"></span> QUICK VIEW</a> <img src="assets/img/bootstrap-ecommerce-templates.png"
 							alt="bootstrap ecommerce templates">
 						<div class="caption">
 							<h4>
@@ -76,8 +75,7 @@
 				<li>
 					<div class="thumbnail">
 						<a class="zoomTool" href="product_details.html"
-							title="add to cart"><span class="icon-search"></span> QUICK
-							VIEW</a> <img src="assets/img/shopping-cart-template.png"
+							title="add to cart"><span class="icon-search"></span> QUICK VIEW</a> <img src="assets/img/shopping-cart-template.png"
 							alt="shopping cart template">
 						<div class="caption">
 							<h4>
@@ -91,13 +89,11 @@
 				<li>
 					<div class="thumbnail">
 						<a class="zoomTool" href="product_details.html"
-							title="add to cart"><span class="icon-search"></span> QUICK
-							VIEW</a> <img src="assets/img/bootstrap-template.png"
+							title="add to cart"><span class="icon-search"></span> QUICK VIEW</a> <img src="assets/img/bootstrap-template.png"
 							alt="bootstrap template">
 						<div class="caption">
 							<h4>
-								<a class="defaultBtn" href="product_details.html">VIEW</a> <span
-									class="pull-right">$22.00</span>
+								<a class="defaultBtn" href="product_details.html">VIEW</a> <span class="pull-right">$22.00</span>
 							</h4>
 						</div>
 					</div>
@@ -131,7 +127,7 @@
 						<h3>${product.name}</h3>
 						<hr class="soft" />
 
-						<form class="form-horizontal qtyFrm">
+						<form class="form-horizontal qtyFrm" method="get" action="<c:url value="/AddCart/${product.id_product }"/> ">
 							<div class="control-group">
 								<label class="control-label"><span><fmt:formatNumber
 											type="number" groupingUsed="true" value="${ product.price }" />₫</span></label>
@@ -154,9 +150,7 @@
 							<h4></h4>
 							<p>${product.title }
 							<p>
-								<button type="submit" class="shopBtn">
-									<span class=" icon-shopping-cart"></span> Add to cart
-								</button>
+								<button type="submit" class="shopBtn"> <span class=" icon-shopping-cart"></span> Thêm Giỏ Hàng </button>
 						</form>
 					</div>
 				</div>
@@ -164,10 +158,8 @@
 
 
 				<ul id="productDetail" class="nav nav-tabs">
-					<li class="active"><a href="#home" data-toggle="tab">Chi
-							tiết sản phẩm</a></li>
-					<li class=""><a href="#profile" data-toggle="tab">Sản phẩm
-							liên quan </a></li>
+					<li class="active"><a href="#home" data-toggle="tab">Chi tiết sản phẩm</a></li>
+					<li class=""><a href="#profile" data-toggle="tab">Sản phẩm liên quan </a></li>
 
 				</ul>
 				<div id="myTabContent" class="tab-content tabWrapper">
