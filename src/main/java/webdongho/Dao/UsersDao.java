@@ -1,5 +1,56 @@
 package webdongho.Dao;
 
-public class UsersDao {
+import org.springframework.stereotype.Repository;
 
+import webdongho.Dto.ProductsDto;
+import webdongho.Dto.ProductsDtoMapper;
+import webdongho.Entity.MapperUsers;
+import webdongho.Entity.Users;
+
+@Repository
+public class UsersDao extends BaseDao{
+	public int AddAccount(Users user) {
+		StringBuffer sql = new StringBuffer();
+		sql.append("INSERT ");
+		sql.append("INTO users ");
+		sql.append("( ");
+		sql.append("	user, ");
+		sql.append("	password, ");
+		sql.append("	display_name, ");
+		sql.append("	address, ");
+		sql.append(" )");
+		sql.append("VALUES ");
+		sql.append("( ");
+		sql.append(" " +user.getUser() +" ");
+		sql.append(" " +user.getPassword() +" ");
+		sql.append(" " +user.getDisplay_name() +" ");
+		sql.append(" " +user.getAddress() +" ");
+		sql.append(" )");
+		int insert = _jdbcTemplate.update(sql.toString());
+		return insert;
+	};
+	
+	
+	public Users GetUserByAccount(Users user) {
+		StringBuffer sql = new StringBuffer();
+		sql.append("INSERT ");
+		sql.append("INTO users ");
+		sql.append("( ");
+		sql.append("	user, ");
+		sql.append("	password, ");
+		sql.append("	display_name, ");
+		sql.append("	address, ");
+		sql.append(" )");
+		sql.append("VALUES ");
+		sql.append("( ");
+		sql.append(" " +user.getUser() +" ");
+		sql.append(" " +user.getPassword() +" ");
+		sql.append(" " +user.getDisplay_name() +" ");
+		sql.append(" " +user.getAddress() +" ");
+		sql.append(" )");
+		
+		String sql = SqlProductByID(id);
+		Users users = _jdbcTemplate.queryForObject(sql, new MapperUsers());
+		return users;
+	};
 }

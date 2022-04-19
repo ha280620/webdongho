@@ -1,5 +1,10 @@
 package webdongho.Service.User;
 
-public interface IAccountService {
+import java.util.HashMap;
 
+import webdongho.Entity.Users;
+
+public interface IAccountService {
+	public int AddAccount(Users user);
+	public int CheckAccount(Users user);
 }

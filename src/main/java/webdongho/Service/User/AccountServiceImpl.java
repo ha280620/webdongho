@@ -1,5 +1,6 @@
 package webdongho.Service.User;
 
+import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,7 +11,13 @@ public class AccountServiceImpl implements IAccountService {
 	@Autowired
 	UsersDao usersDao = new UsersDao();
 	
-	pubic int AddAccount(Users user) {
+	public int AddAccount(Users user) {
+		user.setPassword(BCrypt.hashpw(user.getPassword(), BCrypt.gensalt(12)));
+		return usersDao.AddAccount(user);
+	}
+	
+	public int CheckAccount(Users user) {
+		user.setPassword(BCrypt.hashpw(user.getPassword(), BCrypt.gensalt(12)));
 		return usersDao.AddAccount(user);
 	}
 

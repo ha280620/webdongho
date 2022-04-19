@@ -1,5 +1,6 @@
 package webdongho.UserController;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,7 +12,7 @@ import webdongho.Service.User.AccountServiceImpl;
 
 @Controller
 public class UserController extends BaseController {
-	
+	@Autowired
 	AccountServiceImpl accountService = new AccountServiceImpl();
 	
 	@RequestMapping(value= "/dang-ky", method = RequestMethod.GET)
@@ -25,10 +26,23 @@ public class UserController extends BaseController {
 	public ModelAndView CreateAcc(@ModelAttribute("user") Users user) {
 		int count = accountService.AddAccount(user);
 		if(count > 0) {
-			_mvShare.addObject("status", new Users());
+			_mvShare.addObject("status", "Đăng ký tài khoản thành công");
 		}else {
-			_mvShare.addObject("status", new Users());
+			_mvShare.addObject("status", "Đăng ký tài khoản thất bại");
 		}
+		_mvShare.setViewName("user/account/register");
+		return _mvShare;
+	}
+	
+	@RequestMapping(value= "/dang-nhap", method = RequestMethod.POST)
+	public ModelAndView CreateAcc1(@ModelAttribute("user") Users user) {
+		int count = accountService.(user);
+		if(count > 0) {
+			_mvShare.addObject("status", "Đăng ký tài khoản thành công");
+		}else {
+			_mvShare.addObject("status", "Đăng ký tài khoản thất bại");
+		}
+		_mvShare.setViewName("user/account/register");
 		return _mvShare;
 	}
 }

@@ -85,7 +85,7 @@
 			  <div class="control-group">
 				<label class="control-label" for="inputEmail">Địa chỉ Email</label>
 				<div class="controls">
-				  <form:input type="user" class="span3" placeholder=" Nhập Email" path="user" />  
+				  <form:input type="email" class="span3" placeholder=" Nhập Email" path="user" />  
 				</div>
 			  </div>
 			  <div class="control-group">
@@ -115,18 +115,18 @@
 		<div class="span1"> &nbsp;</div>
 		<div class="span4">
 			<div class="well">
-			<h5>Đã có tài khoản</h5>
-			<form>
+			<h5>Đăng Nhập Hệ Thống</h5>
+			<form:form action="dang-nhap" method="POST" modelAttribute="user">  
 			  <div class="control-group">
 				<label class="control-label" for="inputEmail">Địa Chỉ Email</label>
 				<div class="controls">
-				  <input class="span3"  type="text" placeholder="Email">
+				  <form:input type="email" class="span3" placeholder=" Nhập Email" path="user" />  
 				</div>
 			  </div>
 			  <div class="control-group">
 				<label class="control-label" for="inputPassword">Mật Khẩu</label>
 				<div class="controls">
-				  <input type="password" class="span3" placeholder="Password">
+				  <form:input type="password" class="span3" placeholder=" Nhập Password" path="password" />
 				</div>
 			  </div>
 			  <div class="control-group">
@@ -134,7 +134,7 @@
 				  <button type="submit" class="defaultBtn">Đăng Nhập</button> <a href="#">Quên Mật Khẩu</a>
 				</div>
 			  </div>
-			</form>
+			</form:form>
 		</div>
 		</div>
 	</div>	
