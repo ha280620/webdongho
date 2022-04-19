@@ -116,7 +116,7 @@ Body Section
 		<li class="active">Giỏ hàng</li>
     </ul>
 	<div class="well well-small">
-		<h1>Giỏ hàng <small class="pull-right"> 2 Sản phẩm trong giỏ hàng </small></h1>
+		<h1>Giỏ hàng <small class="pull-right"> ${ TotalQuantityCart } Sản phẩm trong giỏ hàng </small></h1>
 	<hr class="soften"/>	
 
 	<table class="table table-bordered table-condensed">
@@ -169,7 +169,9 @@ Body Section
 <content tag="script">
 <script>
 	$(".edit-cart").on("click", function(){
-		alert($(this).data("id"));
+		var id = $(this).data("id");
+		var quantity = $("#quanty-cart-" + id).val();
+		window.location = "EditCart/" + id +"/"+quantity
 	});
 </script>
 </content>
