@@ -12,7 +12,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
 <meta name="author" content="">
-</head>
+<!-- Bootstrap styles -->
+<link href="<c:url value="/assets/user/css/bootstrap.css" />"
+	rel="stylesheet" />
+<!-- Customize styles -->
+<link href="<c:url value="/assets/user/style.css" />" rel="stylesheet" />
+<!-- font awesome styles -->
+<link
+	href="<c:url value="/assets/user/font-awesome/css/font-awesome.css" />"
+	rel="stylesheet">
+
 <body>
 <div class="row">
 <div id="sidebar" class="span3">
@@ -88,65 +97,52 @@
 	<div class="row">
 		<div class="span4">
 			<div class="well">
-			<h5>Tạo Tài Khoản</h5>
-			Vui lòng nhập Email để tạo tại tài khoản<br/> <br/>
-			<form:form action="dang-ky" method="POST" modelAttribute="user">  
-			  <div class="control-group">
-				<label class="control-label" for="inputEmail">Địa chỉ Email</label>
-				<div class="controls">
-				  <form:input type="email" class="span3" placeholder=" Nhập Email" path="user" />  
-				</div>
-			  </div>
-			  <div class="control-group">
-				<label class="control-label" for="inputPassword">Mật Khẩu</label>
-				<div class="controls">
-				  <form:input type="password" class="span3" placeholder=" Nhập Password" path="password" />  
-				</div>
-			  </div>
-			  <div class="control-group">
-				<label class="control-label" for="inputDisplay_name">Họ và Tên</label>
-				<div class="controls">
-				  <form:input type="display_name" class="span3" placeholder=" Nhập Password" path="display_name" />  
-				</div>
-			  </div>
-			  <div class="control-group">
-				<label class="control-label" for="inputAddress">Địa Chỉ</label>
-				<div class="controls">
-				  <form:input type="address" class="span3" placeholder=" Nhập Địa Chỉ" path="address" />  
-				</div>
-			  </div>
-			  <div class="controls">
-			  <button type="submit" class="btn block">Tạo Tài Khoản</button>
-			  </div>
-			</form:form >
+			<form:form action= "checkout" method="POST" modelAttribute="bills" class="form-horizontal" >
+		<h3>Thanh Toán Đơn Hàng</h3>
+		<div class="control-group">
+			<label class="control-label">Họ Tên <sup>*</sup></label>
+			<div class="controls">
+			  <form:input type="text" placeholder="Nhập Họ Tên" path="display_name"/>
+			</div>
 		</div>
+		<div class="control-group">
+			<label class="control-label"> Địa Chỉ <sup>*</sup></label>
+			<div class="controls">
+			  <form:input type="text" placeholder="Nhập Địa Chỉ" path="address"/>
+			</div>
+		</div>
+		 <div class="control-group">
+			<label class="control-label"> Số Điện Thoại <sup>*</sup></label>
+			<div class="controls">
+			   <form:input type="text" placeholder="Nhập Số Điện THoại" path="password"/>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label"> Email <sup>*</sup></label>
+			<div class="controls">
+			   <form:input type="text" placeholder="Nhập Email" path="email"/>
+			</div>
+		</div>
+		
+	<div class="control-group">
+		<div class="controls">
+		 <input type="submit" name="submitAccount" value="Register" class="shopBtn exclusive">
+		</div>
+	</div>
+	</form>
+</div>
+			</div>
+		</div>
+	<div class="control-group">
+		<div class="controls">
+		 <input type="submit" name="submitAccount" value="Register" class="shopBtn exclusive">
+		</div>
+	</div>
+	</form>
+	</div>
 		</div>
 		<div class="span1"> &nbsp;</div>
-		<div class="span4">
-			<div class="well">
-			<h5>Đăng Nhập Hệ Thống</h5>
-			<h1> ${ statusLogin }</h1>
-			<form:form action="dang-nhap" method="POST" modelAttribute="user">  
-			  <div class="control-group">
-				<label class="control-label" for="inputEmail">Địa Chỉ Email</label>
-				<div class="controls">
-				  <form:input type="text" class="span3" placeholder=" Nhập Email" path="user" />  
-				</div>
-			  </div>
-			  <div class="control-group">
-				<label class="control-label" for="inputPassword">Mật Khẩu</label>
-				<div class="controls">
-				  <form:input type="text" class="span3" placeholder=" Nhập Password" path="password" />
-				</div>
-			  </div>
-			  <div class="control-group">
-				<div class="controls">
-				  <button type="submit" class="defaultBtn">Đăng Nhập</button> <a href="#">Quên Mật Khẩu</a>
-				</div>
-			  </div>
-			</form:form>
-		</div>
-		</div>
+		
 	</div>	
 	
 </div>

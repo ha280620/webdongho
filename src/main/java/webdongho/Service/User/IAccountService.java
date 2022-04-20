@@ -6,5 +6,5 @@ import webdongho.Entity.Users;
 
 public interface IAccountService {
 	public int AddAccount(Users user);
-	public int CheckAccount(Users user);
+	public Users CheckAccount(Users user);
 }

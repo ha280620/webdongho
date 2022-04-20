@@ -44,9 +44,15 @@
 					</div>
 					<a class="active" href="index.html"> <span class="icon-home"></span>
 						Home
-					</a> <a href="#"><span class="icon-user"></span> My Account</a> <a
-						href="<c:url value="/dang-ky"/>"><span class="icon-edit"></span> Đăng Ký </a> <a href="contact.html"><span class="icon-envelope"></span>
-						Contact us</a> <a href="<c:url value="/gio-hang"/>"><span
+					</a>
+					<c:if test="${not empty LogInInfo }">
+					<a href="#"><span class="icon-user"></span> ${ LoginInfo.display_name } </a>
+					<a href="<c:url value="/dang-xuat"/>"><span class="icon-edit"></span> Đăng Xuất </a> 
+					</c:if>
+					<c:if test="${empty LogInInfo }">
+					<a href="<c:url value="/dang-ky"/>"><span class="icon-edit"></span> Đăng Ký </a> 
+					</c:if>
+					<a href="contact.html"><span class="icon-envelope"></span>Contact us</a> <a href="<c:url value="/gio-hang"/>"><span
 						class="icon-shopping-cart"></span> ${ TotalQuantityCart } Sản Phẩm - <span
 						class="badge badge-warning"> ${ TotalPriceCart } VNĐ</span></a>
 				</div>
